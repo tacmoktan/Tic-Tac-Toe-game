@@ -27,7 +27,7 @@ class TicTacToeFrame extends JButton {
     int[] countVerticalMarks = new int[V_win];
     int countRightDiagonalMarks = 0;
     int countLeftDiagonalMarks = 0;
-    static int countWinResult = 0;    //on 1, it indicates win by exactly one possibility out of 8.
+    int countWinResult = 0;    //on 1, it indicates win by exactly one possibility out of 8.
 
     public TicTacToeFrame(int r, int c, String[][] matrix, JLabel resultDisplay, JFrame f) {
         this.fmatrix = matrix;
@@ -80,7 +80,7 @@ class TicTacToeFrame extends JButton {
                 if (winResult.isEmpty()) {
                     if (counter == 9) {             //all 9 boxes filled but no wins
                         finalResult = "Draw";
-                        disposeFrame(5000, f);      //delays 4s and disposes frame
+                        disposeFrame(5000, f);      //delays 5s and disposes frame
                     }
                 } else {
                     finalResult = winResult;
